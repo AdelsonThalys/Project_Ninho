@@ -1,5 +1,5 @@
 import './App.css';
-import profile from "./image/a.png";
+import profile from "./image/logo.png";
 import email from "./image/email.jpg";
 import pass from "./image/pass.png";
 function App() {
