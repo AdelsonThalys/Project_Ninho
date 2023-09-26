@@ -15,8 +15,8 @@ export function Header() {
                             <ul className="flex items-center gap-6">
                                 
                                 <ItemMenu name="Quero alugar" rota="/"/>
-                                <ItemMenu name="Quero alugar" rota="/cadastro"/>
-                                <ItemMenu name="Quero alugar" rota="/about"/>
+                                <ItemMenu name="Login" rota="/cadastro"/>
+                                <ItemMenu name="Tire suas duvidas" rota="/about"/>
                                 <ItemMenu name="Quero alugar" rota="/a"/>
                             </ul>
                         </div>

@@ -9,7 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+      colors:{
+        dark: "#212529",
+        gradientPurple: "#6a11cb",
+        gradientBlue: "#2575fc"
+      }
       
       
     },
