@@ -6,7 +6,7 @@ type Props = {
 
 export function ItemMenu({ name, rota }: Props) {
     return(
-        <li> <Link href={rota}><span className="text-black font-bold">{name}</span></Link>
+        <li> <Link href={rota}><span className="text-black font-bold focus:bg-white">{name}</span></Link>
         
             
        
