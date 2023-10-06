@@ -1,60 +1,91 @@
-import Image from 'next/image'
-import Produto from '@/components/Produto'
-export default function Home() {
+import Link from "next/link";
+
+const Home = () => {
+  const paths = [
+    {
+      name: "Hompage",
+      url: "/products/ListaProdutos",
+    },
+    {
+      name: "Product Details",
+      url: "/product/details",
+    },
+    {
+      name: "Cart",
+      url: "/cart",
+    },
+    {
+      name: "Login",
+      url: "/login",
+    },
+    {
+      name: "Register",
+      url: "/register",
+    },
+    {
+      name: "Shipping",
+      url: "/shipping",
+    },
+    {
+      name: "Profile",
+      url: "/profile",
+    },
+    {
+      name: "Add new address",
+      url: "/address/new",
+    },
+    {
+      name: "Update Profile",
+      url: "/profile/update",
+    },
+    {
+      name: "Update Password",
+      url: "/password/update",
+    },
+    {
+      name: "User Order",
+      url: "/me/orders",
+    },
+    {
+      name: "New Product",
+      url: "/product/new",
+    },
+    {
+      name: "All Products Admin",
+      url: "/admin/products",
+    },
+    {
+      name: "Upload Images",
+      url: "/admin/upload_images",
+    },
+    {
+      name: "Orders Admin",
+      url: "/admin/orders",
+    },
+    {
+      name: "Update Order",
+      url: "/admin/order/update",
+    },
+    {
+      name: "Users Admin",
+      url: "/admin/users",
+    },
+    {
+      name: "Update User Admin",
+      url: "/admin/user/update",
+    },
+  ];
+
   return (
-    <section className='text-gray-400 bg-gray-950'>
-      <div className='container px-5 py-24 mx-auto'>
-        <div className='flex flex-wrap flex-row -m-4'>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-          <Produto produto='capacete' Descrição='pá' Preço='99'/>
-        </div>
-      </div>
-    </section>
-  )
-}
+    <div className="text-center">
+      <h1 className="text-3xl my-10 font-bold">Components List</h1>
+      {paths?.map((path) => (
+        <Link href={path.url}>
+          <p className="text-xl">{path.name}</p>
+        </Link>
+      ))}
+    </div>
+  );
+};
+
+export default Home;

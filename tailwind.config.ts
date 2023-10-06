@@ -12,7 +12,8 @@ const config: Config = {
       colors:{
         dark: "#212529",
         gradientPurple: "#6a11cb",
-        gradientBlue: "#2575fc"
+        gradientBlue: "#2575fc",
+        corFundo: "#9C9FBF"
       }
       
       

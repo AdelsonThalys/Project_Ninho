@@ -27,7 +27,7 @@ export default function Login() {
 
                                     </div>
 
-                                    <p className="mb-10"> esqueceu sua senha?</p>
+                                    <Link href="/auth/UpdatePassword"><button className=" outline outline-2 rounded-sm px-14 py-2 outline-white px5 w-lg hover:bg-slate-50 hover:bg-opacity-10" type="submit">esqueceu</button></Link>
                                     
                                     <Link href="/home"><button className=" outline outline-2 rounded-sm px-14 py-2 outline-white px5 w-lg hover:bg-slate-50 hover:bg-opacity-10" type="submit">Logar</button></Link>
                                    
