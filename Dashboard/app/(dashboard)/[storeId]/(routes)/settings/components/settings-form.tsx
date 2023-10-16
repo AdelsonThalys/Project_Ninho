@@ -72,7 +72,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
       router.push('/');
       toast.success('Store deleted.');
     } catch (error: any) {
-      toast.error('Make sure you removed all products and categories first.');
+      toast.error('A loja não pode ser deletada enquanto ouver produtos e categorias nela.');
     } finally {
       setLoading(false);
       setOpen(false);
@@ -88,7 +88,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
       loading={loading}
     />
      <div className="flex items-center justify-between">
-        <Heading title="Store settings" description="Manage store preferences" />
+        <Heading title="Configurações da loja" description="Admistre as configurações gerais da sua loja" />
         <Button
           disabled={loading}
           variant="destructive"
@@ -107,9 +107,9 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Nome</FormLabel>
                   <FormControl>
-                    <Input disabled={loading} placeholder="Store name" {...field} />
+                    <Input disabled={loading} placeholder="Nome da Loja" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -117,7 +117,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
             />
           </div>
           <Button disabled={loading} className="ml-auto" type="submit">
-            Save changes
+            Salvar
           </Button>
         </form>
       </Form>
